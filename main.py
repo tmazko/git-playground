@@ -13,6 +13,9 @@ def is_game_over():
 
 
 def guess_is_valid(candidate):
+    if guess in guesses:
+        print("Sorry, you have already guessed this word")
+        return False
     for letter in candidate:
         if letter not in word:
             print(f"You can not use letter {letter}")
@@ -42,6 +45,7 @@ print(f"Your word is '{word}'")
 
 while not is_game_over():
     guess = input("Your next take: ")
+
 
     if not guess_is_valid(guess):
         continue

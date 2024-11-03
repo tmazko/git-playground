@@ -67,3 +67,4 @@ while not is_game_over():
         if errors==ERRORS_TO_LOSE:
             user_lost()
     used.append(guess)
+print("Bye")
